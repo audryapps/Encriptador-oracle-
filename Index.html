@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="css/copiar.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="encabezado"></div>
+        <img src="./assets/ball-g13ed454bf_1280.jpg" alt="logo desncriptador" class="logo">
+        <h1 class="titulo" >Desencriptador de Texto</h1>
+    </header>
+    <main class="content">
+        <section class="principal">
+            <div class="input-texto">
+                <h1>Ingrese su Texto</h1>
+                <p>Recuerde no ingresar mayúculas, acentos, ni caracteres especiales.</p>
+                <form id="input">
+                    <textarea id="mensaje" class="textarea"rows="5" cols="33" placeholder="Ingresa aqui tu texto" required oninput="this.value = this.value.replace(/[^a-z]/,'')"></textarea>
+                    <div class="col-lg-4 col-md-4 flex-container">
+                    <input type="button" id="encriptar" value="Encriptar" class="boton">
+                    <input type="button" id="desencriptar" value="Desencriptar" class="boton">
+                    </div>
+                </form>
+            </div>
+            <div class="content">
+                <h1 class="msg">Mensaje Traducido</h1>
+                <div id="texto-traducido">
+                    <input type="text" class="content-traducido" id="traducido" readonly="readonly" placeholder="texto-traducido"style="WIDTH: 228px; HEIGHT: 98px"
+                    size=32>
+                    <div class="col-lg-4 col-md-4 flex-container">
+                    <input type="button" value="copiar" id="copiar" class="boton">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&Copyrights -Diseño Manuela Vargas Herrera-2023</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
